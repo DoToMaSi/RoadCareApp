@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
-import { IVehicle } from './models/vehicle.class';
+import { IVehicle } from './models/vehicle.interface';
 
 @Component({
   selector: 'app-vehicles',

@@ -1,3 +1,62 @@
-<p>
-  vehicle-form works!
-</p>
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="closeModal()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      {{ getVehicle()?.id ? 'Editar Veículo' : 'Cadastrar Veículo' }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="vehicleForm">
+    <ion-list>
+      <ion-list-header>
+        <span>Dados do Veículo</span>
+      </ion-list-header>
+
+      <ion-item lines="none">
+        <ion-input label="Placa" type="text" name="plate" labelPlacement="floating" errorText="Placa é obrigatório"
+          formControlName="plate" maxlength="10">
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input label="Marca" type="text" name="brand" labelPlacement="floating" errorText="Marca é obrigatório"
+          formControlName="brand">
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input label="Modelo" type="text" name="model" labelPlacement="floating" errorText="Modelo é obrigatório"
+          formControlName="model">
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input label="Ano" type="text" name="year" labelPlacement="floating" maxlength="4"
+          errorText="Ano é obrigatório e maior que 1911" formControlName="year" [maskito]="yearInputOptions"
+          [maskitoElement]="maskPredicate">
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input label="Kilometragem" type="text" name="odometer" labelPlacement="floating" maxlength="12"
+          errorText="Kilometragem é obrigatório e maior que 0 (zero)" formControlName="odometer"
+          [maskito]="odometerInputOptions" [maskitoElement]="maskPredicate">
+        </ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block">
+      <ion-icon name="save" slot="start"></ion-icon>Salvar
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

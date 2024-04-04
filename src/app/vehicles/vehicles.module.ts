@@ -8,6 +8,7 @@ import { VehiclesPageRoutingModule } from './vehicles-routing.module';
 
 import { VehiclesPage } from './vehicles.page';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
+import { MaskitoDirective } from '@maskito/angular';
 
 const angularModules = [
   CommonModule,
@@ -19,6 +20,10 @@ const ionicModules = [
   IonicModule
 ]
 
+const miscImports = [
+  MaskitoDirective
+]
+
 const vehicleComponents = [
   VehiclesPage,
   VehicleFormComponent
@@ -28,6 +33,7 @@ const vehicleComponents = [
   imports: [
     ...angularModules,
     ...ionicModules,
+    ...miscImports,
     VehiclesPageRoutingModule
   ],
   declarations: [
