@@ -1,0 +1,7 @@
+{
+  "name": "RoadCareApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
