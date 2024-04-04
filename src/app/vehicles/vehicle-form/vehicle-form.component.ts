@@ -4,9 +4,9 @@ import { IVehicle } from '../models/vehicle.interface';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MaskitoOptions } from '@maskito/core';
 
-import yearInputMask from '../utils/masks/year-mask';
-import odometerMask from '../utils/masks/odometer-mask';
-import { maskPredicate } from '../utils/masks/element-predicate';
+import yearInputMask from '../../core/utils/masks/year-mask';
+import odometerMask from '../../core/utils/masks/odometer-mask';
+import { maskPredicate } from '../../core/utils/masks/element-predicate';
 
 @Component({
   selector: 'app-vehicle-form',

@@ -9,6 +9,7 @@ import { VehiclesPageRoutingModule } from './vehicles-routing.module';
 import { VehiclesPage } from './vehicles.page';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
 import { MaskitoDirective } from '@maskito/angular';
+import { TranslateModule } from '@ngx-translate/core';
 
 const angularModules = [
   CommonModule,
@@ -21,7 +22,8 @@ const ionicModules = [
 ]
 
 const miscImports = [
-  MaskitoDirective
+  MaskitoDirective,
+  TranslateModule
 ]
 
 const vehicleComponents = [
