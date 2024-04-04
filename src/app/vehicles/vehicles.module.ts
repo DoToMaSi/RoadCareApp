@@ -1,20 +1,38 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
 import { VehiclesPageRoutingModule } from './vehicles-routing.module';
 
 import { VehiclesPage } from './vehicles.page';
+import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
+
+const angularModules = [
+  CommonModule,
+  FormsModule,
+  ReactiveFormsModule
+]
+
+const ionicModules = [
+  IonicModule
+]
+
+const vehicleComponents = [
+  VehiclesPage,
+  VehicleFormComponent
+]
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
+    ...angularModules,
+    ...ionicModules,
     VehiclesPageRoutingModule
   ],
-  declarations: [VehiclesPage]
+  declarations: [
+    ...vehicleComponents
+  ]
 })
-export class VehiclesPageModule {}
+
+export class VehiclesPageModule { }
