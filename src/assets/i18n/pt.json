@@ -1,3 +1,17 @@
 {
-  "HELLO": "Olá"
+  "HELLO": "Olá",
+  "SAVE": "Salvar",
+  "VEHICLE": {
+    "DATA": "Dados do Veículo",
+    "PLATE": "Placa",
+    "PLATE_ERROR": "Placa é obrigatório",
+    "BRAND": "Marca",
+    "BRAND_ERROR": "Marca é obrigatório",
+    "MODEL": "Modelo",
+    "MODEL_ERROR": "Modelo é obrigatório",
+    "YEAR": "Ano",
+    "YEAR_ERROR": "Ano deve ser obrigatório e maior que 1914",
+    "ODOMETER": "Kilometragem",
+    "ODOMETER_ERROR": "Kilometragem é obrigatório e maior que 0 (zero)"
+  }
 }

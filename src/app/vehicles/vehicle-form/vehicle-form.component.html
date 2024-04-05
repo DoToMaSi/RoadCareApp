@@ -15,37 +15,37 @@
   <form [formGroup]="vehicleForm">
     <ion-list>
       <ion-list-header>
-        <span>Dados do Veículo</span>
+        <span>{{ 'VEHICLE.DATA' | translate }}</span>
       </ion-list-header>
 
       <ion-item lines="none">
-        <ion-input label="Placa" type="text" name="plate" labelPlacement="floating" errorText="Placa é obrigatório"
-          formControlName="plate" maxlength="10">
+        <ion-input label="{{ 'VEHICLE.PLATE' | translate }}" type="text" name="plate" labelPlacement="floating"
+          errorText="{{ 'VEHICLE.PLATE_ERROR' | translate }}" formControlName="plate" maxlength="10">
         </ion-input>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-input label="Marca" type="text" name="brand" labelPlacement="floating" errorText="Marca é obrigatório"
-          formControlName="brand">
+        <ion-input label="{{ 'VEHICLE.BRAND' | translate }}" type="text" name="brand" labelPlacement="floating"
+          errorText="{{ 'VEHICLE.BRAND_ERROR' | translate }}" formControlName="brand">
         </ion-input>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-input label="Modelo" type="text" name="model" labelPlacement="floating" errorText="Modelo é obrigatório"
-          formControlName="model">
+        <ion-input label="{{ 'VEHICLE.MODEL' | translate }}" type="text" name="model" labelPlacement="floating"
+          errorText="{{ 'VEHICLE.MODEL_ERROR' | translate }}" formControlName="model">
         </ion-input>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-input label="Ano" type="text" name="year" labelPlacement="floating" maxlength="4"
-          errorText="Ano é obrigatório e maior que 1911" formControlName="year" [maskito]="yearInputOptions"
-          [maskitoElement]="maskPredicate">
+        <ion-input label="{{ 'VEHICLE.YEAR' | translate }}" type="text" name="year" labelPlacement="floating"
+          maxlength="4" errorText="{{ 'VEHICLE.YEAR_ERROR' | translate }}" formControlName="year"
+          [maskito]="yearInputOptions" [maskitoElement]="maskPredicate">
         </ion-input>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-input label="Kilometragem" type="text" name="odometer" labelPlacement="floating" maxlength="12"
-          errorText="Kilometragem é obrigatório e maior que 0 (zero)" formControlName="odometer"
+        <ion-input label="{{ 'VEHICLE.ODOMETER' | translate }}" type="text" name="odometer" labelPlacement="floating"
+          maxlength="12" errorText="{{ 'VEHICLE.ODOMETER_ERROR' | translate }}" formControlName="odometer"
           [maskito]="odometerInputOptions" [maskitoElement]="maskPredicate">
         </ion-input>
       </ion-item>
@@ -56,7 +56,7 @@
 <ion-footer>
   <ion-toolbar>
     <ion-button expand="block">
-      <ion-icon name="save" slot="start"></ion-icon>Salvar
+      <ion-icon name="save" slot="start"></ion-icon>{{ 'SAVE' | translate }}
     </ion-button>
   </ion-toolbar>
 </ion-footer>

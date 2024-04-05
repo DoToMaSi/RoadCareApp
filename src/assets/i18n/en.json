@@ -1,3 +1,17 @@
 {
-  "HELLO": "Hello"
+  "HELLO": "Hello",
+  "SAVE": "Save",
+  "VEHICLE": {
+    "DATA": "Vehicle Data",
+    "PLATE": "License Plate",
+    "PLATE_ERROR": "License Plate is required",
+    "BRAND": "Brand",
+    "BRAND_ERROR": "Brand is required",
+    "MODEL": "Model",
+    "MODEL_ERROR": "Model is required",
+    "YEAR": "Year",
+    "YEAR_ERROR": "Year is required and must be higher than 1914",
+    "ODOMETER": "Odometer",
+    "ODOMETER_ERROR": "Odometer is required and must be higher than zero"
+  }
 }
