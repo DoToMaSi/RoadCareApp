@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
 import { IVehicle } from './models/vehicle.interface';
+import { VehicleService } from './services/vehicle.service';
 
 @Component({
   selector: 'app-vehicles',
@@ -10,7 +11,15 @@ import { IVehicle } from './models/vehicle.interface';
 })
 export class VehiclesPage {
 
-  constructor(protected modalCtrl: ModalController) { }
+
+  constructor(
+    public vehicleService: VehicleService,
+    protected modalCtrl: ModalController
+  ) { }
+
+  get vehicles() {
+    return this.vehicleService.getVehicles();
+  }
 
   async openVehicleForm(vehicle?: IVehicle) {
     const modal = await this.modalCtrl.create({

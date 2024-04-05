@@ -10,6 +10,7 @@ import { VehiclesPage } from './vehicles.page';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
 import { MaskitoDirective } from '@maskito/angular';
 import { TranslateModule } from '@ngx-translate/core';
+import { VehicleService } from './services/vehicle.service';
 
 const angularModules = [
   CommonModule,
@@ -31,6 +32,10 @@ const vehicleComponents = [
   VehicleFormComponent
 ]
 
+const providers = [
+  VehicleService
+]
+
 @NgModule({
   imports: [
     ...angularModules,
@@ -40,6 +45,9 @@ const vehicleComponents = [
   ],
   declarations: [
     ...vehicleComponents
+  ],
+  providers: [
+    ...providers
   ]
 })
 
