@@ -12,6 +12,13 @@
     "YEAR": "Ano",
     "YEAR_ERROR": "Ano deve ser obrigatório e maior que 1914",
     "ODOMETER": "Kilometragem",
-    "ODOMETER_ERROR": "Kilometragem é obrigatório e maior que 0 (zero)"
+    "ODOMETER_ERROR": "Kilometragem é obrigatório e maior que 0 (zero)",
+    "FORM_ERROR": "Há erros no formulário. Verifique os dados preenchidos ou campos com erro",
+    "TYPE": {
+      "LABEL": "Tipo",
+      "CAR": "Carro",
+      "BIKE": "Motocicleta",
+      "TRUCK": "Caminhão"
+    }
   }
 }

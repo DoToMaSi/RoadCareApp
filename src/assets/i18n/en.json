@@ -12,6 +12,13 @@
     "YEAR": "Year",
     "YEAR_ERROR": "Year is required and must be higher than 1914",
     "ODOMETER": "Odometer",
-    "ODOMETER_ERROR": "Odometer is required and must be higher than zero"
+    "ODOMETER_ERROR": "Odometer is required and must be higher than zero",
+    "FORM_ERROR": "There's errors in the form. Verify the filled inputs and fields with error",
+    "TYPE": {
+      "LABEL": "Type",
+      "CAR": "Car",
+      "BIKE": "Bike",
+      "TRUCK": "Truck"
+    }
   }
 }

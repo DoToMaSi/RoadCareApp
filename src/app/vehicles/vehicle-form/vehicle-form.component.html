@@ -12,7 +12,7 @@
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="vehicleForm">
+  <form [formGroup]="vehicleForm" (ngSubmit)="submitForm()">
     <ion-list>
       <ion-list-header>
         <span>{{ 'VEHICLE.DATA' | translate }}</span>
@@ -22,6 +22,15 @@
         <ion-input label="{{ 'VEHICLE.PLATE' | translate }}" type="text" name="plate" labelPlacement="floating"
           errorText="{{ 'VEHICLE.PLATE_ERROR' | translate }}" formControlName="plate" maxlength="10">
         </ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-select label="{{ 'VEHICLE.TYPE.LABEL' | translate }}" name="type" labelPlacement="floating"
+          interface="popover" formControlName="type">
+          @for(type of vehicleTypeSelect; track type.value) {
+          <ion-select-option [value]="type.value">{{ type.label | translate }}</ion-select-option>
+          }
+        </ion-select>
       </ion-item>
 
       <ion-item lines="none">
@@ -55,7 +64,7 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-button expand="block">
+    <ion-button expand="block" (click)="submitForm()">
       <ion-icon name="save" slot="start"></ion-icon>{{ 'SAVE' | translate }}
     </ion-button>
   </ion-toolbar>
